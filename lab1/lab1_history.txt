@@ -1,0 +1,116 @@
+    1  cat /var/log/vboxadd-setup.log
+    2  cat /var/log/vboxadd-setup
+    3  cat /var/log/vboxadd-setup.log
+    4  /var/log/vboxadd-setup.log
+    5  cat /var/log/vboxadd-setup.log
+    6  sudo su
+    7  quit
+    8  yum install gnome-tweak-tool
+    9  su
+   10  gnome
+   11  whoami
+   12  whoiam
+   13  echo "Hello World"
+   14  date
+   15  cal
+   16  man cal
+   17  cal -3
+   18  clear
+   19  pwd
+   20  cd /
+   21  cd ..
+   22  pwd
+   23  ls
+   24  ls /var
+   25  cd ~
+   26  cd ..
+   27  pwd
+   28  ls
+   29  ls -l
+   30  cd ~
+   31  mkdir fruits
+   32  mkdir ~/animals
+   33  rm -fr ~/animals
+   34  mkdir ~/animals
+   35  touch /tmp/temp
+   36  cd fruits/
+   37  touch apple banana pineaple lion
+   38  touch ~/animals/cat.txt ~/animals/dog.txt ~/animals/elephant.txt
+   39  ls -l
+   40  ls b*
+   41  ls *a
+   42  ls *[bi]*
+   43  cp /etc/passwd ~
+   44  cat /etc/issue
+   45  cp /etc/issue apple
+   46  cat apple
+   47  mv lion ~/animals/
+   48  mv pineaple pineapple
+   49  wc /etc/passwd
+   50  cd ~
+   51  ln -s /etc/passwd passwd_link
+   52  ln .bash_history history_hard
+   53  ls -l
+   54  cat history_hard 
+   55  rm fruits/apple 
+   56  mkdir rmme
+   57  rmdir rmme
+   58  rmdir fruits/
+   59  rm -fr fruits/
+   60  cat /etc/passwd /var/log/boot.log 
+   61  cp /etc/init.d/ ~
+   62  cp -r  /etc/init.d/ ~
+   63  rm -fr init.d/
+   64  clean
+   65  clear
+   66  cut -d: -f1 /etc/passwd | sort
+   67  cut -d: -f1,3 /etc/passwd | sort
+   68  grep :/bin/bash /etc/passwd | wc -l
+   69  grep :/bin/bash /etc/passwd | cut -d: f1 | sort -r
+   70  grep :/bin/bash /etc/passwd | cut -d: f1 /etc/passwd | sort -r
+   71  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+   72  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | ???
+   73  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+   74  rpm -ql man-db | xargs -l du    2> /dev/null  | sort -n
+   75                  ^ для каждого   ^ игнорировать  ^ сортировать числа
+   76                   файла вызвать      ошибки
+   77                    команду du
+   78  top -b -n1 | sort -k12 
+   79  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+   80  sort /etc/passwd | tr ":" " "
+   81  cut -d: -f1,7 /etc/passwd
+   82  cut -d: -f1,7 /etc/passwd | tr ":" " "
+   83  yum install -y git
+   84  su
+   85  cd /usr/share/doc/git-*
+   86  ls
+   87  clear
+   88  cat user-manual.txt | tr ' ' '\012' 
+   89  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]'
+   90  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]'
+   91  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]'
+   92  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c
+   93  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn
+   94  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+   95  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+   96  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+   97  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+   98  cd ~
+   99  clear
+  100  ping ya.ru
+  101  curl wttr.in
+  102  hostname -I
+  103  curl ifconfig.me
+  104  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  105  ls
+  106  less README-ru.md 
+  107  rm README-ru.md 
+  108  clear
+  109  id
+  110  whoami
+  111  sudo id
+  112  sudo less /var/log/messages 
+  113  quit
+  114  less /var/log/messages 
+  115  su
+  116  history > lab1_history.txt
