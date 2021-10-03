@@ -1,0 +1,10 @@
+.:
+итого 4
+drwxrw-r--. 2 aleksandra_shch aleksandra_shch 22 окт  3 14:13 dir
+-rw-r-----. 1 root            aleksandra_shch  5 окт  3 14:12 file
+-rw-------. 1 aleksandra_shch aleksandra_shch  0 окт  3 14:31 file1
+-rw-rw-rw-. 1 aleksandra_shch aleksandra_shch  0 окт  3 14:31 file2
+
+./dir:
+итого 4
+-rw-rw-r--. 1 aleksandra_shch aleksandra_shch 7 окт  3 14:14 new_file

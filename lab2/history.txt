@@ -1,0 +1,47 @@
+    1  mkdir test
+    2  cd test/
+    3  touch file
+    4  ll
+    5  chmod ugo-rwx file
+    6  ll
+    7  echo "test" > file
+    8  cat file
+    9  chmod u+w file
+   10  ll
+   11  echo "test" > file
+   12  cat file
+   13  chmod g+r file
+   14  ll
+   15  cat file
+   16  chmod u+r file
+   17  ll
+   18  cat file
+   19  mkdir dir
+   20  cd dir/
+   21  touch new_file
+   22  echo "file 2" > new_file 
+   23  ls
+   24  cd ..
+   25  ls
+   26  ll
+   27  chmod ugo-x dir
+   28  cd dir
+   29  cat dir/new_file 
+   30  rm dir/new_file 
+   31  chown root file
+   32  chown root:root file
+   33  chown aleksandra_shch:root file
+   34  umask -p
+   35  umask 066 
+   36  touch file1
+   37  ll
+   38  umask 000
+   39  touch file2
+   40  ll
+   41  su
+   42  cat file
+   43  sudo chmod g+r file
+   44  cat file
+   45  chmod u+x dir
+   46  ls -lR > ~/labs/lab2/ls.txt
+   47  history > ~/labs/lab2/history.txt
