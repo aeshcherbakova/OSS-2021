@@ -17,3 +17,4 @@
    17  sudo losetup --detach /dev/loop0
    18  sudo losetup --list
    19  history > ~/labs/lab6/history.txt
+
