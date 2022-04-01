@@ -1,0 +1,45 @@
+  481  ldd /bin/login | grep pam
+  482  ls -l /lib64/libpam*
+  483  ls -l /lib64/security/
+  484  vi /etc/pam.d/system-auth
+  485  vi /etc/pam.d/su
+  496  sudo nano /etc/pam.d/su
+  502  su -c "hostname mephi"
+  503  sudo nano /etc/pam.d/su
+  506  cp /etc/pam.d/su ~/pam.d_backup
+  507  sudo nano /etc/pam.d/su
+  509  sudo passwd user1
+  510  su - user1
+  511  sudo nano /etc/pam.d/su
+  512  su - user1
+  513  sudo nano /etc/pam.d/su
+  514  sudo nano /etc/pam.d/login
+  515  sudo touch /etc/securetty
+  516  su -
+  517  su - user1
+  518  sudo nano /etc/pam.d/login
+  519  man pam_pwquality
+  520  sudo nano /etc/security/pwquality.conf
+  521  sudo nano /etc/pam.d/system-auth
+  522  sudo passwd user1
+  523  sudo nano /etc/security/pwquality.conf
+  524  sudo nano /etc/pam.d/system-auth
+  525  man pam_limits
+  526  sudo nano /etc/security/limits.conf
+  527  su - user1
+  530  sudo nano /etc/security/limits.conf
+  531  wget https://raw.githubusercontent.com/linux-pam/linux-pam/master/examples/check_user.c
+  532  nano check_user.c
+  533  sudo yum install pam-devel
+  534  gcc check_user.c -o check_user -lpam -lpam_misc
+  535  sudo nano /etc/pam.d/check
+  536  ./check_user aleksandra_shch
+  537  sudo nano /etc/pam.d/check
+  538  ./check_user user1
+  538  nano check_user.c
+  539  gcc check_user.c -o check_user -lpam -lpam_misc
+  540  ./check_user aleksandra_shch
+  541  ./check_user user1
+  542  su -
+  543  ./check_user aleksandra_shch
+  544  history > labs/lab8/history.txt 
