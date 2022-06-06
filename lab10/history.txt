@@ -1,0 +1,91 @@
+    1  history 
+    2  yum repolist
+    3  yum grouplist
+    4  rpm -qa | less
+    5  rpm -qa | wc -l
+    6  yum list installed | less
+    7  rpm -qa | grep gnuplot
+    8  yum search gnuplot
+    9  yum info gnuplot
+   10  sudo yum install gnuplot
+   11  rpm -qi gnuplot
+   12  yum list installed gnuplot
+   13  rpm -ql gnuplot
+   14  rpm -qf /usr/bin/gnuplot-wx
+   15  yum deplist gnuplot
+   16  sudo rpm -e gnuplot-common
+   17  sudo yum remove gnuplot-common
+   18  ls
+   19  nano /etc/yum.repos.d/yandex.repo
+   20  touch /etc/yum.repos.d/yandex.repo
+   21  sudo nano /etc/yum.repos.d/yandex.repo
+   22  sudo yum clean all
+   23  sudo yum repolist yandex
+   24  sudo yum install @development-tools rpmdev* rpm-sign
+   25  cd
+   26  rpmdev-setuptree
+   27  rpmbuild
+   28  ls
+   29  rpmdev-setuptree
+   30  ls
+   31  cd rpmbuild/
+   32  ls
+   33  mkdir b19-515-18-1.0
+   34  cd b19-515-18-1.0/
+   35  ls
+   36  nano b19-515-19
+   37  sudo chmod +x b19-515-18
+   38  mv b19-515-19 b19-515-18
+   39  sudo chmod +x b19-515-18
+   40  cd ~/rpmbuild/SOURCES/
+   41  tar -cvzf b19-515-18-1.0.tar.gz b19-515-18-1.0
+   42  ls
+   43  mv ~/rpmbuild/b19-515-18-1.0/ ~/rpmbuild/SOURCES/b19-515-18-1.0
+   44  ls
+   45  tar -cvzf b19-515-18-1.0.tar.gz b19-515-18-1.0
+   46  ls
+   47  cd ../SPECS
+   48  nano b19-515-18.spec
+   49  rpmbuild -ba №группы-№студента.spec
+   50  rpmbuild -ba b19-515-18.spec
+   51  cd ~/rpmbuild/SOURCES
+   52  mkdir c-b19-515-18--1.0
+   53  cd c-b19-515-18--1.0/
+   54  nano c-b19-515-18.c
+   55  cd ~/rpmbuild/SOURCES
+   56  mv c-b19-515-18--1.0/ c-b19-515-18-1.0
+   57  tar cvfz c-b19-515-18-1.0.tar.gz c-b19-515-18-1.0/
+   58  cd ~/rpmbuild/SPECS
+   59  nano c-b19-515-18.spec
+   60  rpmbuild -ba c-№группы-№студента.spec
+   61  rpmbuild -ba c-b19-515-18.spec
+   62  gpg2 --gen-key
+   63  sudo yum install heveged
+   64  sudo systemctl start haveged
+   65  gpg2 --export -a 'Shcherbakova Aleksandra' > ~/rpmbuild/RPM-GPG-KEY-Shcherbakova-Aleksandra
+   66  rpm --addsign ~/rpmbuild/RPMS/*/*.rpm
+   67  sudo yum install createrepo
+   68  sudo mkdir -p /var/www/html/myrepo
+   69  sudo cp ~/rpmbuild/RPMS/*/*.rpm /var/www/html/myrepo
+   70  sudo cp ~/rpmbuild/RPM-GPG-KEY-Shcherbakova-Aleksandra /var/www/html/myrepo
+   71  sudo createrepo -v /var/www/html/myrepo
+   72  sudo nano /etc/yum.repos.d/my.repo
+   73  sudo yum install -y httpd
+   74  sudo systemctl enable httpd.service
+   75  sudo yum install -y httpd
+   76  sudo systemctl enable httpd.service
+   77  sudo systemctl start httpd.service
+   78  yum repolist
+   79  sudo yum install c-b19-515-18 b19-515-18
+   80  cd /var/www/html/myrepo
+   81  ls
+   82  cd repodata/
+   83  l
+   84  ls
+   85  cp /var/www/html/myrepo/ ~/labs/lab10/
+   86  cp /var/www/html/myrepo ~/labs/lab10/
+   87  cd ~/labs/lab10
+   88  ls
+   89  sudo cp -R /var/www/html/myrepo/ ~/labs/lab10
+   90  ls
+   91  history >> history.txt
